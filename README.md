@@ -10,7 +10,7 @@ Go to the [Releases](../../releases) page to download the latest APK.
 
 ## User Guide
 
-- [User Guide (HTML)](docs/userguide.html)
+- [User Guide (HTML)](https://victorypoint.github.io/ZLDREventReporter/docs/userguide.html)
 - [User Guide (PDF)](docs/userguide.pdf)
 
 ## Requirements

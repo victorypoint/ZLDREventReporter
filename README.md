@@ -1,6 +1,6 @@
 # ZLDR Event Reporter
 
-An Android app for tracking ZLDR (Zwift League of Distance Riders) event statistics — sign-ups, attendance, and finishers.
+An Android app for tracking ZLDR (Zwift Long Distance Runners and Riders) event statistics — sign-ups, attendance, and finishers.
 
 ## Download
 

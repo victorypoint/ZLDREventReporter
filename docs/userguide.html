@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZLDR Event Reporter — User Guide</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 1.65;
+      color: #1a1a1a;
+      background: #fff;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 28px;
+    }
+
+    /* ── Cover ── */
+    .cover {
+      text-align: center;
+      padding: 48px 0 36px;
+      border-bottom: 3px solid #FF6B00;
+      margin-bottom: 36px;
+    }
+    .cover h1 {
+      font-size: 38px;
+      color: #FF6B00;
+      letter-spacing: -0.5px;
+    }
+    .cover .subtitle {
+      font-size: 17px;
+      color: #555;
+      margin-top: 6px;
+    }
+    .cover .meta {
+      font-size: 12px;
+      color: #999;
+      margin-top: 14px;
+    }
+
+    /* ── Headings ── */
+    h2 {
+      font-size: 20px;
+      color: #CC5500;
+      margin: 36px 0 10px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #FF6B00;
+    }
+    h3 {
+      font-size: 15px;
+      color: #333;
+      margin: 18px 0 5px;
+    }
+
+    /* ── Body text ── */
+    p { margin-bottom: 10px; }
+    ul, ol { margin: 6px 0 10px 22px; }
+    li { margin-bottom: 4px; }
+    strong { color: #111; }
+
+    /* ── Screenshot figure ── */
+    .figure {
+      float: right;
+      margin: 0 0 20px 28px;
+      width: 210px;
+      text-align: center;
+    }
+    .figure img {
+      width: 210px;
+      border: 1px solid #ddd;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    }
+    .figure figcaption {
+      font-size: 11px;
+      color: #777;
+      margin-top: 5px;
+      font-style: italic;
+    }
+    .clearfix::after { content: ""; display: table; clear: both; }
+
+    /* ── Two-figure row ── */
+    .figure-row {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .figure-row .figure {
+      float: none;
+      margin: 0;
+    }
+
+    /* ── Callout box ── */
+    .tip {
+      background: #fff8f0;
+      border-left: 4px solid #FF6B00;
+      padding: 10px 14px;
+      margin: 12px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 13px;
+    }
+    .tip strong { color: #CC5500; }
+
+    /* ── Stat table ── */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 12px 0 16px;
+      font-size: 13px;
+    }
+    th {
+      background: #FF6B00;
+      color: #fff;
+      padding: 7px 10px;
+      text-align: left;
+    }
+    td {
+      padding: 6px 10px;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: #fafafa; }
+
+    /* ── Gesture list ── */
+    .gesture-list { list-style: none; margin: 8px 0; }
+    .gesture-list li {
+      display: flex;
+      gap: 12px;
+      padding: 6px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .gesture-list li:last-child { border-bottom: none; }
+    .gesture-badge {
+      background: #FF6B00;
+      color: #fff;
+      font-size: 11px;
+      font-weight: bold;
+      border-radius: 4px;
+      padding: 2px 7px;
+      white-space: nowrap;
+      align-self: flex-start;
+      margin-top: 2px;
+      min-width: 80px;
+      text-align: center;
+    }
+
+    /* ── Print ── */
+    @media print {
+      body { padding: 0; font-size: 12px; max-width: 100%; }
+      h2 { page-break-before: always; border-bottom: 1.5pt solid #FF6B00; }
+      h2:first-of-type { page-break-before: avoid; }
+      .cover { page-break-after: always; }
+      .figure img { width: 170px; box-shadow: none; border: 0.5pt solid #ccc; }
+      .figure { width: 170px; }
+      .tip { background: none; border-left: 3pt solid #FF6B00; }
+      .figure-row .figure img { width: 170px; }
+      a { color: inherit; text-decoration: none; }
+    }
+
+    @page { margin: 2.2cm 2cm; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════ COVER ══════════════════════════════════ -->
+<div class="cover">
+  <h1>ZLDR Event Reporter</h1>
+  <div class="subtitle">User Guide</div>
+  <div class="meta">Version 1.8.0 &nbsp;·&nbsp; June 2026</div>
+</div>
+
+<!-- ══════════════════════════════ 1. OVERVIEW ══════════════════════════════ -->
+<h2>Overview</h2>
+<p><strong>ZLDR Event Reporter</strong> is an Android app for members of <strong>Zwift League Distance Riders (ZLDR)</strong>. It automatically syncs with the Zwift platform to collect attendance statistics for every ZLDR running and cycling event — how many riders registered, showed up, and finished.</p>
+<p>The app is useful for two audiences:</p>
+<ul>
+  <li><strong>Participants</strong> — review upcoming events, check your series at a glance, and see who finished alongside you.</li>
+  <li><strong>Organizers</strong> — track attendance trends across recurring series, monitor live events as they happen, and generate shareable reports for the community.</li>
+</ul>
+<div class="tip"><strong>Data source:</strong> All figures come directly from Zwift via its event API. The app does not maintain its own attendance records independently — it stores and displays whatever Zwift reports.</div>
+
+<!-- ══════════════════════════════ 2. GETTING STARTED ══════════════════════════════ -->
+<h2>Getting Started</h2>
+<p>On first launch you are prompted to sign in with your <strong>Zwift credentials</strong> (email and password). The app uses your account only to retrieve event data; credentials are stored securely on your device using Android's encrypted storage and are never transmitted to any server other than Zwift.</p>
+<p>After signing in the app performs its first sync automatically. This discovers all upcoming ZLDR events and fetches attendance counts for recent past events. The process typically completes within a few seconds on a good connection.</p>
+<div class="tip"><strong>Auto-sync:</strong> The app re-syncs every time it comes to the foreground (e.g. when you switch back to it) and also runs a background sync roughly every four hours, so data stays current without any manual action.</div>
+
+<!-- ══════════════════════════════ 3. REPORTS — DATE VIEW ══════════════════════════════ -->
+<h2>Reports Screen — Date View</h2>
+
+<div class="figure">
+  <img src="ss1_reports_date.png" alt="Reports screen – Date view">
+  <figcaption>Fig. 1 &nbsp;Reports screen, Date view<br>(Week filter selected)</figcaption>
+</div>
+
+<p>The Reports screen is the main screen of the app. It opens in <strong>Date view</strong> by default, grouping events by the selected time period. Two rows of filter buttons appear at the top:</p>
+<ul>
+  <li><strong>Period</strong> — Day, Week (default), Month, or Year</li>
+  <li><strong>Sport</strong> — All, Running, or Cycling</li>
+</ul>
+<p>Events are organised into two collapsible top-level sections:</p>
+<ul>
+  <li><strong>Upcoming Events</strong> — collapsed by default; shows future events with their current registered count.</li>
+  <li><strong>Completed Events</strong> — expanded by default; shows past events grouped into period rows. The current period row auto-expands on launch.</li>
+</ul>
+<p>Tap any period row header (e.g. <em>Week of Jun 7</em>) to expand or collapse it. Each event row shows the event name and sport icon on the first line, and date + stat columns on the second line.</p>
+
+<h3>Stat columns</h3>
+<table>
+  <tr><th>Column</th><th>Full name</th><th>What it means</th></tr>
+  <tr><td><strong>Reg</strong></td><td>Registered</td><td>Riders who signed up before the event</td></tr>
+  <tr><td><strong>Shwd</strong></td><td>Showed Up</td><td>Riders who joined the event in-game</td></tr>
+  <tr><td><strong>Fin</strong></td><td>Finished</td><td>Riders who completed and appear in Zwift's results</td></tr>
+  <tr><td><strong>Att%</strong></td><td>Attendance rate</td><td>Shwd ÷ Reg &nbsp;—&nbsp; green ≥70%, amber ≥40%, red &lt;40%</td></tr>
+  <tr><td><strong>Cmp%</strong></td><td>Completion rate</td><td>Fin ÷ Shwd &nbsp;—&nbsp; same colour scale</td></tr>
+</table>
+<p>Tap any column header label in the header bar to see its full definition in a popup.</p>
+
+<div class="tip"><strong>In Progress:</strong> Events currently underway display a blinking green <em>In progress</em> badge. The app polls Zwift every 60 seconds while an event is live and updates the Reg count in real time.</div>
+
+<div class="clearfix"></div>
+
+<!-- ══════════════════════════════ 4. REPORTS — SERIES VIEW ══════════════════════════════ -->
+<h2>Reports Screen — Series View</h2>
+
+<div class="figure">
+  <img src="ss2_reports_series.png" alt="Reports screen – Series view">
+  <figcaption>Fig. 2 &nbsp;Reports screen, Series view</figcaption>
+</div>
+
+<p>Tap the <strong>bar-chart icon</strong> in the top bar to switch to <strong>Series view</strong>. This groups all events by their recurring series name and day of the week — for example, <em>ZLDR AYOP Hour (Tuesday)</em> — making it easy to see participation trends across multiple occurrences of the same event.</p>
+<p>Each series row shows <strong>aggregate totals</strong> across all occurrences (Reg, Shwd, Fin) alongside the overall Att% and Cmp%. Individual occurrence rows are listed beneath each series row, most recent first.</p>
+<p>As with Date view, the screen is split into <strong>Upcoming Events</strong> (collapsed, nearest first) and <strong>Completed Events</strong> (expanded, most recent first).</p>
+<p>Tap the icon again to return to Date view.</p>
+
+<div class="clearfix"></div>
+
+<!-- ══════════════════════════════ 5. GESTURES ══════════════════════════════ -->
+<h2>Gestures on Event Rows</h2>
+<p>Three gestures are available on any event row in both Date and Series views:</p>
+<ul class="gesture-list">
+  <li>
+    <span class="gesture-badge">Tap</span>
+    <div>Opens <strong>Event Details</strong> — name, date, duration, description, and category breakdown with rider counts per subgroup.</div>
+  </li>
+  <li>
+    <span class="gesture-badge">Double-tap</span>
+    <div>Opens the <strong>Participant List</strong> for completed events — finishing rank, rider name, late-join flag, time, and distance. Not available for upcoming events.</div>
+  </li>
+  <li>
+    <span class="gesture-badge">Long press</span>
+    <div>Opens the event's page on <strong>zwift.com</strong> in your browser, or in the Zwift Companion app if it is installed on the same device.</div>
+  </li>
+</ul>
+
+<!-- ══════════════════════════════ 6. EVENT DETAILS ══════════════════════════════ -->
+<h2>Event Details Screen</h2>
+
+<div class="figure">
+  <img src="ss3_event_detail.png" alt="Event Details screen">
+  <figcaption>Fig. 3 &nbsp;Event Details screen</figcaption>
+</div>
+
+<p><strong>Tap once</strong> on any event row to open the Event Details screen. It shows:</p>
+<ul>
+  <li>Event name and sport icon</li>
+  <li>Status — <em>Completed</em> with date and local time, or <em>Starts</em> for upcoming events</li>
+  <li>Duration</li>
+  <li>About — the event description as entered in Zwift</li>
+  <li>Categories — each subgroup (e.g. category E) listed with its rider count</li>
+</ul>
+<p>For completed events where all three counts (Reg / Shwd / Fin) are zero, a <strong>Re-fetch</strong> banner appears at the top. Tapping <strong>Re-fetch</strong> resets the event so the next sync attempts to retrieve the data from Zwift again. This can happen if the sync ran before Zwift had finished recording the results.</p>
+
+<div class="clearfix"></div>
+
+<!-- ══════════════════════════════ 7. PARTICIPANTS ══════════════════════════════ -->
+<h2>Participant List</h2>
+
+<div class="figure">
+  <img src="ss4b_participants.png" alt="Participant list">
+  <figcaption>Fig. 4 &nbsp;Participant list — ZLDR AYOP Hour<br>(9 finishers, 1 late join)</figcaption>
+</div>
+
+<p><strong>Double-tap</strong> any completed event row to open the Participant List. Each row shows:</p>
+<ul>
+  <li><strong>#</strong> — finishing rank</li>
+  <li><strong>Name</strong> — rider's Zwift display name</li>
+  <li><strong>Late</strong> — <em>True</em> if the rider joined after the event started</li>
+  <li><strong>Time</strong> — total time in the event</li>
+  <li><strong>Dist</strong> — distance covered</li>
+</ul>
+<p>Summary counts at the top show total <strong>Finishers</strong> and <strong>Late Joins</strong>. Loading the participant list also updates the Fin count stored for that event, so the Reports screen stays accurate.</p>
+<p>If Zwift has not yet posted results, the screen shows <em>Results not yet available for this event.</em> Check back a few minutes after the event ends and sync again.</p>
+
+<div class="clearfix"></div>
+
+<!-- ══════════════════════════════ 8. SETTINGS ══════════════════════════════ -->
+<h2>Settings</h2>
+
+<div class="figure-row">
+  <div class="figure">
+    <img src="ss5_settings.png" alt="Settings screen – top">
+    <figcaption>Fig. 5 &nbsp;Settings (top)</figcaption>
+  </div>
+  <div class="figure">
+    <img src="ss5b_settings_bottom.png" alt="Settings screen – bottom">
+    <figcaption>Fig. 6 &nbsp;Settings (bottom)</figcaption>
+  </div>
+</div>
+
+<p>Tap the <strong>gear icon</strong> in the top-right corner of the Reports screen to open Settings.</p>
+
+<h3>Sync History</h3>
+<p>Shows the date and time of the last successful sync, and the total number of events currently stored on your device.</p>
+
+<h3>Generate Report</h3>
+<p>Opens the Report Generator dialog — see the next section for full details.</p>
+
+<h3>Export Data</h3>
+<p>Saves all event records to a JSON backup file and opens the Android share sheet so you can send it to cloud storage, email, or another app. Useful before switching phones or as a periodic backup.</p>
+
+<h3>Import Data</h3>
+<p>Opens a file picker to load a previously exported backup. Records from the file are merged into the local database. If the same event exists in both the backup and on the device, <strong>the backup version wins</strong> — so import an older backup with care.</p>
+
+<h3>Help / About</h3>
+<p><strong>Help</strong> opens a quick-reference guide to all major app features. <strong>About</strong> shows the current version number and build date.</p>
+
+<h3>Log Out</h3>
+<p>Signs you out of your Zwift account. Cached event data is <strong>not</strong> deleted — only the stored credentials are removed. You will need to sign in again before the next sync.</p>
+
+<h3>Clear Database</h3>
+<p>Permanently deletes all cached events and resets the sync history. Use this only if you need to start completely fresh. <strong>This cannot be undone</strong> — use Export Data first to preserve your history.</p>
+
+<!-- ══════════════════════════════ 9. GENERATE REPORT ══════════════════════════════ -->
+<h2>Generating Reports</h2>
+
+<div class="figure-row">
+  <div class="figure">
+    <img src="ss6_report_dialog.png" alt="Generate Report dialog – options">
+    <figcaption>Fig. 7 &nbsp;Report options<br>(Sport, Date range, Include, View)</figcaption>
+  </div>
+  <div class="figure">
+    <img src="ss6b.png" alt="Generate Report dialog – format">
+    <figcaption>Fig. 8 &nbsp;Report options<br>(View and Format)</figcaption>
+  </div>
+</div>
+
+<p>Tap <strong>Generate Report</strong> in Settings to open the report options dialog. Configure each option, then tap <strong>Generate</strong>.</p>
+
+<table>
+  <tr><th>Option</th><th>Choices</th><th>Notes</th></tr>
+  <tr><td><strong>Sport</strong></td><td>All sports · Running · Cycling</td><td>Filters which events are included</td></tr>
+  <tr><td><strong>Date range</strong></td><td>All time · This year · This month · Last 30 days · Custom</td><td>Custom opens a date picker for start and end dates</td></tr>
+  <tr><td><strong>Include</strong></td><td>Completed · Upcoming · Both</td><td>Upcoming rows show Reg only; Shwd/Fin/Att%/Cmp% are blank</td></tr>
+  <tr><td><strong>View</strong></td><td>By date · By series</td><td>By series groups recurring events together with aggregate totals</td></tr>
+  <tr><td><strong>Format</strong></td><td>CSV · Plain text · HTML · PDF</td><td>See below</td></tr>
+</table>
+
+<h3>Report formats</h3>
+<ul>
+  <li><strong>CSV</strong> — comma-separated file suitable for import into Excel, Google Sheets, or any spreadsheet app.</li>
+  <li><strong>Plain text</strong> — simple fixed-width text report, easy to paste into a message or email.</li>
+  <li><strong>HTML</strong> — formatted report that opens in a browser. Use your browser's <em>Print</em> function to save it as a PDF.</li>
+  <li><strong>PDF</strong> — paginated A4 table rendered directly on the device, ready to share or print without a browser.</li>
+</ul>
+<p>After generation, the Android share sheet opens so you can save the file, attach it to an email, post it to a messaging app, or open it directly.</p>
+<div class="tip"><strong>Tip for organizers:</strong> <em>By series · All time · HTML</em> produces a one-page summary of every recurring ZLDR series with aggregate totals and rates — ideal for community newsletters or committee reports.</div>
+
+<!-- ══════════════════════════════ 10. ORGANIZER TIPS ══════════════════════════════ -->
+<h2>Tips for Organizers</h2>
+<ul>
+  <li><strong>Track series health with Att% and Cmp%.</strong> A sustained Att% below 70% on a recurring series may indicate a scheduling conflict, promotion gap, or time-zone mismatch for your regular riders.</li>
+  <li><strong>Use Series view for trend spotting.</strong> The aggregated row shows overall performance at a glance; expand the row to see whether a recent drop is a single outlier or a longer trend.</li>
+  <li><strong>Results take a few minutes to post.</strong> The Fin count is sourced from Zwift's race-results endpoint, which is typically populated 5–15 minutes after an event ends. If Fin shows 0 right after an event, wait a few minutes and bring the app to the foreground to trigger a sync.</li>
+  <li><strong>Some events show reduced counts after 24 hours.</strong> Zwift removes detailed attendance data for certain private events roughly 24 hours post-event. The app preserves the best value it observed — use the Participant List screen (double-tap) within that window to capture the full finisher list.</li>
+  <li><strong>Back up before switching devices.</strong> Use <em>Export Data</em> to save a JSON backup, then <em>Import Data</em> on the new device. Your full history will be available immediately without waiting for a re-sync.</li>
+  <li><strong>Generate a PDF report for committee meetings.</strong> Settings → Generate Report → By series · All time · PDF produces a clean paginated table suitable for sharing or printing.</li>
+</ul>
+
+</body>
+</html>

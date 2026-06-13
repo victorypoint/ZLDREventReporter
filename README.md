@@ -32,7 +32,7 @@ Go to the [Releases](../../releases) page to download the latest APK.
 ## User Guide
 
 - [User Guide (HTML)](https://victorypoint.github.io/ZLDREventReporter/docs/userguide.html)
-- [User Guide (PDF)](https://github.com/victorypoint/ZLDREventReporter/raw/master/docs/userguide.pdf)
+- [User Guide (PDF)](https://github.com/victorypoint/ZLDREventReporter/blob/master/docs/userguide.pdf)
 
 ## Requirements
 

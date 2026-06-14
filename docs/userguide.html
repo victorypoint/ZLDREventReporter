@@ -55,6 +55,13 @@
       margin: 18px 0 5px;
     }
 
+    h4 {
+      font-size: 13px;
+      color: #555;
+      margin: 14px 0 4px;
+      font-style: italic;
+    }
+
     /* ── Body text ── */
     p { margin-bottom: 10px; }
     ul, ol { margin: 6px 0 10px 22px; }
@@ -319,6 +326,24 @@
 
 <h3>Generate Report</h3>
 <p>Opens the Report Generator dialog — see the next section for full details.</p>
+
+<h3>Fun Stats</h3>
+<p>Tap <strong>Fun Stats</strong> to open a dialog showing lighthearted highlights drawn from your event history. Stats are split into two sections — <strong>Running</strong> first, then <strong>Cycling</strong> — each covering the past 7 days and the most recent year with enough data.</p>
+
+<h4>Past 7 days</h4>
+<table>
+  <tr><th>Award</th><th>What it finds</th></tr>
+  <tr><td><strong>Biggest Crowd</strong></td><td>The event with the highest number of riders who showed up</td></tr>
+  <tr><td><strong>Star of the Week</strong></td><td>The event with the best showed-up-to-registered ratio (minimum 3 registrations)</td></tr>
+  <tr><td><strong>Ghost Award</strong></td><td>The event with the most no-shows (registrations minus showed up)</td></tr>
+  <tr><td><strong>Ironclad Award</strong></td><td>The event with the highest finisher rate (minimum 3 showed up)</td></tr>
+</table>
+<p>If there are fewer than 2 completed events in the past 7 days for a sport, that section shows <em>"Not enough data this week."</em></p>
+
+<h4>Series of the Year</h4>
+<p>Identifies the recurring series with the best average attendance rate (Att%) in the most recent year that has at least 3 occurrences of a series. Shown below the weekly awards for each sport.</p>
+
+<p>Tap <strong>Text</strong> to share a plain-text version, or <strong>PDF</strong> for a formatted document. Both open the Android share sheet.</p>
 
 <h3>Export Data</h3>
 <p>Saves all event records to a JSON backup file and opens the Android share sheet so you can send it to cloud storage, email, or another app. Useful before switching phones or as a periodic backup.</p>

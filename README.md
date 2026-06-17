@@ -25,7 +25,7 @@ An Android and PWA (Progressive web) app for the ZLDR (Zwift Long Distance Runne
 
 ## Web App (PWA)
 
-A Progressive Web App version is available at **https://zldr-event-reporter.fly.dev** — no download or installation required. It works on any device with a modern browser, including:
+A Progressive Web App version is available at <a href="https://zldr-event-reporter.fly.dev" target="_blank">https://zldr-event-reporter.fly.dev</a> — no download or installation required. It works on any device with a modern browser, including:
 
 - iOS (Safari)
 - Android (Chrome)
@@ -37,7 +37,7 @@ A Progressive Web App version is available at **https://zldr-event-reporter.fly.
 
 Chrome does not automatically show an install prompt. To add the app to your home screen:
 
-1. Open **https://zldr-event-reporter.fly.dev** in Chrome
+1. Open <a href="https://zldr-event-reporter.fly.dev" target="_blank">https://zldr-event-reporter.fly.dev</a> in Chrome
 2. Tap the **⋮** menu (three dots, top right)
 3. Tap **"Add to Home screen"**
 
@@ -47,7 +47,7 @@ After installing, the app launches in standalone mode — no browser address bar
 
 Safari does not automatically show an install prompt. To add the app to your home screen:
 
-1. Open **https://zldr-event-reporter.fly.dev** in Safari
+1. Open <a href="https://zldr-event-reporter.fly.dev" target="_blank">https://zldr-event-reporter.fly.dev</a> in Safari
 2. Tap the **Share** button (box with arrow, bottom of screen)
 3. Tap **"Add to Home Screen"**
 

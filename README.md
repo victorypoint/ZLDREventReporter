@@ -23,7 +23,39 @@ An Android and PWA (Progressive web) app for the ZLDR (Zwift Long Distance Runne
 
 ---
 
-## Download
+## Web App (PWA)
+
+A Progressive Web App version is available at **https://zldr-event-reporter.fly.dev** — no download or installation required. It works on any device with a modern browser, including:
+
+- iOS (Safari)
+- Android (Chrome)
+- Windows (Chrome, Edge, or any browser)
+- macOS (Safari, Chrome, or any browser)
+- Any other platform with a modern browser
+
+### Install on Android (Chrome)
+
+Chrome does not automatically show an install prompt. To add the app to your home screen:
+
+1. Open **https://zldr-event-reporter.fly.dev** in Chrome
+2. Tap the **⋮** menu (three dots, top right)
+3. Tap **"Add to Home screen"**
+
+After installing, the app launches in standalone mode — no browser address bar — from an icon on your home screen, exactly like a native app.
+
+### Install on iOS (Safari)
+
+Safari does not automatically show an install prompt. To add the app to your home screen:
+
+1. Open **https://zldr-event-reporter.fly.dev** in Safari
+2. Tap the **Share** button (box with arrow, bottom of screen)
+3. Tap **"Add to Home Screen"**
+
+After installing, the app launches in standalone mode — no browser address bar — from an icon on your home screen, exactly like a native app.
+
+---
+
+## Android App Download
 
 Go to the [Releases](../../releases) page to download the latest APK.
 
@@ -36,5 +68,6 @@ Go to the [Releases](../../releases) page to download the latest APK.
 
 ## Requirements
 
-- Android 8.0 (Oreo) or higher
-- A Zwift account
+**Web app:** Any modern browser (Chrome, Safari, Edge, Firefox). A Zwift account.
+
+**Android app:** Android 8.0 (Oreo) or higher. A Zwift account.

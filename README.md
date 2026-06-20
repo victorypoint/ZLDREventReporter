@@ -59,7 +59,7 @@ Chrome and Edge both support installing the app as a standalone desktop app. To 
 
 1. Open <a href="https://zldr-event-reporter.fly.dev" target="_blank">https://zldr-event-reporter.fly.dev</a> in Chrome or Edge
 2. Look for the **install icon** in the right side of the address bar (a computer with a download arrow) and click it, **or** open the browser menu and choose **Apps > Install this site as an app** (Edge) or **Cast, Save and Share > Install page as app** (Chrome)
-3. Click **Install** in the prompt that appears
+3. Click **Install** in the prompt that appears — Edge will also offer to pin to taskbar, pin to Start, create a desktop shortcut, and auto-start on login; choose whichever options you want
 
 After installing, the app launches in standalone mode — no browser address bar — from a shortcut on your desktop, exactly like a native app.
 

@@ -63,6 +63,26 @@ Chrome and Edge both support installing the app as a standalone desktop app. To 
 
 After installing, the app launches in standalone mode — no browser address bar — from a shortcut on your desktop, exactly like a native app.
 
+### Install on macOS (Safari)
+
+Requires macOS Sonoma (14) or later. To add the app to your Dock:
+
+1. Open <a href="https://zldr-event-reporter.fly.dev" target="_blank">https://zldr-event-reporter.fly.dev</a> in Safari
+2. From the menu bar choose **File > Add to Dock...**
+3. Optionally rename the app, then click **Add**
+
+After installing, the app launches in standalone mode — no browser address bar — from an icon in your Dock and Applications folder, exactly like a native app.
+
+### Install on macOS (Chrome or Edge)
+
+Chrome and Edge both support installing the app as a standalone desktop app. To install:
+
+1. Open <a href="https://zldr-event-reporter.fly.dev" target="_blank">https://zldr-event-reporter.fly.dev</a> in Chrome or Edge
+2. Look for the **install icon** in the right side of the address bar (a computer with a download arrow) and click it, **or** open the browser menu and choose **Apps > Install this site as an app** (Edge) or **Cast, Save and Share > Install page as app** (Chrome)
+3. Click **Install** in the prompt that appears
+
+After installing, the app launches in standalone mode — no browser address bar — from an icon in your Applications folder and Dock, exactly like a native app.
+
 ---
 
 ## Android App Download

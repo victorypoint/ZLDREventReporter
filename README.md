@@ -38,7 +38,7 @@ A Progressive Web App version is available at <a href="https://zldr-event-report
 Chrome does not automatically show an install prompt. To add the app to your home screen:
 
 1. Open <a href="https://zldr-event-reporter.fly.dev" target="_blank">https://zldr-event-reporter.fly.dev</a> in Chrome
-2. Tap the **⋮** menu (three dots, top right)
+2. Tap the three-dot menu (top right)
 3. Tap **"Add to Home screen"**
 
 After installing, the app launches in standalone mode — no browser address bar — from an icon on your home screen, exactly like a native app.
@@ -53,13 +53,23 @@ Safari does not automatically show an install prompt. To add the app to your hom
 
 After installing, the app launches in standalone mode — no browser address bar — from an icon on your home screen, exactly like a native app.
 
+### Install on Windows (Chrome or Edge)
+
+Chrome and Edge both support installing the app as a standalone desktop app. To install:
+
+1. Open <a href="https://zldr-event-reporter.fly.dev" target="_blank">https://zldr-event-reporter.fly.dev</a> in Chrome or Edge
+2. Look for the **install icon** in the right side of the address bar (a computer with a download arrow) and click it, **or** open the browser menu and choose **Apps > Install this site as an app** (Edge) or **Cast, Save and Share > Install page as app** (Chrome)
+3. Click **Install** in the prompt that appears
+
+After installing, the app launches in standalone mode — no browser address bar — from a shortcut on your desktop, exactly like a native app.
+
 ---
 
 ## Android App Download
 
 Go to the [Releases](../../releases) page to download the latest APK.
 
-> **Install note:** You will need to allow installation from unknown sources on your Android device. Go to **Settings → Apps → Special app access → Install unknown apps** and enable it for your browser or file manager.
+> **Install note:** You will need to allow installation from unknown sources on your Android device. Go to **Settings > Apps > Special app access > Install unknown apps** and enable it for your browser or file manager.
 
 ## User Guide
 
